@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStart Summit 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte moderna do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">DevStart <span>Summit</span></div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#inscricao">Inscrição</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O próximo passo da sua carreira tech começa aqui.</h1>
+            <p class="slogan">Participe do maior workshop online e gratuito de desenvolvimento web frontend.</p>
+            <button id="cta-button" class="btn-primary">Garantir Minha Vaga</button>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <h2>Sobre o Evento</h2>
+        <p>O DevStart Summit é um evento imersivo projetado para levar suas habilidades de codificação ao próximo nível. Aprenda as melhores práticas de HTML, CSS avançado e JavaScript moderno diretamente com especialistas do mercado.</p>
+    </section>
+
+    <section id="inscricao" class="form-section">
+        <div class="form-container">
+            <h2>Faça sua Inscrição</h2>
+            <p>Preencha os dados abaixo para receber o seu link de acesso exclusivo.</p>
+            
+            <form id="cadastro-form">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="seu.email@exemplo.com">
+                </div>
+
+                <!-- REQUISITO EXTRA: Campos de endereço para a API ViaCep -->
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" maxlength="8" required placeholder="Ex: 45600000">
+                    </div>
+                    <div class="input-group">
+                        <label for="estado">Estado (UF)</label>
+                        <input type="text" id="estado" readonly placeholder="Auto-preenchido">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" readonly placeholder="Auto-preenchido">
+                </div>
+
+                <div class="input-group">
+                    <label for="mensagem">Por que você quer participar? (Opcional)</label>
+                    <textarea id="mensagem" rows="3" placeholder="Conte-nos brevemente sua motivação..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Concluir Inscrição</button>
+            </form>
+
+            <div id="mensagem-sucesso" class="success-box hidden">
+                <h3>🎉 Inscrição Confirmada!</h3>
+                <p>Obrigado por se inscrever, <span id="user-name"></span>! O link de acesso foi enviado para o seu e-mail.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 DevStart Summit. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
